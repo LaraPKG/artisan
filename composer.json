@@ -1,6 +1,14 @@
 {
     "name": "larapkg/artisan",
-    "description": "Free standing artisan",
+    "version": "1.0.0",
+    "description": "Free standing artisan for package development.",
+    "keywords": [
+        "lumen",
+        "packages",
+        "artisan",
+        "development",
+        "LaraPKG"
+    ],
     "type": "project",
     "license": "MIT",
     "autoload": {
@@ -22,6 +30,12 @@
     "require": {
         "php": "^7.3|^8.0",
         "laravel/lumen": "8.x-dev",
-        "flipbox/lumen-generator": "dev-develop"
+        "flipbox/lumen-generator": "dev-develop",
+        "larapkg/lumen-discovery": "dev-main"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "LaraPkg\\LumenDiscover\\Events\\Dump::post"
+        ]
     }
 }

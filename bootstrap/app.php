@@ -67,6 +67,7 @@ $app->configure('app');
 */
 
 $app->register(\Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+$app->register(LaraPkg\LumenDiscover\ServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
