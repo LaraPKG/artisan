@@ -9,6 +9,16 @@ use Laravel\Lumen\Application as LumenApplication;
 class Application extends LumenApplication
 {
     /**
+     * Get the version number of the application.
+     *
+     * @return string
+     */
+    public function version()
+    {
+        return 'Artisan (1.0.1) (Lumen 8.2.7 Laravel Components ^8.0)';
+    }
+
+    /**
      * Get the path to the application "app" directory.
      */
     public function path(): string
@@ -26,15 +36,15 @@ class Application extends LumenApplication
     {
         $defaults = [
             \Illuminate\Support\Facades\Cache::class => 'Cache',
-            \Illuminate\Support\Facades\DB::class => 'DB',
+//            \Illuminate\Support\Facades\DB::class => 'DB',
             \Illuminate\Support\Facades\Event::class => 'Event',
             \Illuminate\Support\Facades\Log::class => 'Log',
             \Illuminate\Support\Facades\Queue::class => 'Queue',
             \Illuminate\Support\Facades\Route::class => 'Route',
-            \Illuminate\Support\Facades\Schema::class => 'Schema',
-            \Illuminate\Support\Facades\Storage::class => 'Storage',
-            \Illuminate\Support\Facades\URL::class => 'URL',
-            \Illuminate\Support\Facades\Validator::class => 'Validator',
+//            \Illuminate\Support\Facades\Schema::class => 'Schema',
+//            \Illuminate\Support\Facades\Storage::class => 'Storage',
+//            \Illuminate\Support\Facades\URL::class => 'URL',
+//            \Illuminate\Support\Facades\Validator::class => 'Validator',
         ];
 
         if (! static::$aliasesRegistered) {
@@ -59,8 +69,8 @@ class Application extends LumenApplication
 //        \Illuminate\Auth\AuthManager::class => 'registerAuthBindings',
 //        \Illuminate\Contracts\Auth\Guard::class => 'registerAuthBindings',
 //        \Illuminate\Contracts\Auth\Access\Gate::class => 'registerAuthBindings',
-        \Illuminate\Contracts\Broadcasting\Broadcaster::class => 'registerBroadcastingBindings',
-        \Illuminate\Contracts\Broadcasting\Factory::class => 'registerBroadcastingBindings',
+//        \Illuminate\Contracts\Broadcasting\Broadcaster::class => 'registerBroadcastingBindings',
+//        \Illuminate\Contracts\Broadcasting\Factory::class => 'registerBroadcastingBindings',
         \Illuminate\Contracts\Bus\Dispatcher::class => 'registerBusBindings',
         'cache' => 'registerCacheBindings',
         'cache.store' => 'registerCacheBindings',
@@ -70,14 +80,14 @@ class Application extends LumenApplication
         'config' => 'registerConfigBindings',
         'db' => 'registerDatabaseBindings',
         \Illuminate\Database\Eloquent\Factory::class => 'registerDatabaseBindings',
-        'filesystem' => 'registerFilesystemBindings',
-        'filesystem.cloud' => 'registerFilesystemBindings',
-        'filesystem.disk' => 'registerFilesystemBindings',
-        \Illuminate\Contracts\Filesystem\Cloud::class => 'registerFilesystemBindings',
-        \Illuminate\Contracts\Filesystem\Filesystem::class => 'registerFilesystemBindings',
-        \Illuminate\Contracts\Filesystem\Factory::class => 'registerFilesystemBindings',
-        'encrypter' => 'registerEncrypterBindings',
-        \Illuminate\Contracts\Encryption\Encrypter::class => 'registerEncrypterBindings',
+//        'filesystem' => 'registerFilesystemBindings',
+//        'filesystem.cloud' => 'registerFilesystemBindings',
+//        'filesystem.disk' => 'registerFilesystemBindings',
+//        \Illuminate\Contracts\Filesystem\Cloud::class => 'registerFilesystemBindings',
+//        \Illuminate\Contracts\Filesystem\Filesystem::class => 'registerFilesystemBindings',
+//        \Illuminate\Contracts\Filesystem\Factory::class => 'registerFilesystemBindings',
+//        'encrypter' => 'registerEncrypterBindings',
+//        \Illuminate\Contracts\Encryption\Encrypter::class => 'registerEncrypterBindings',
         'events' => 'registerEventBindings',
         \Illuminate\Contracts\Events\Dispatcher::class => 'registerEventBindings',
         'files' => 'registerFilesBindings',
